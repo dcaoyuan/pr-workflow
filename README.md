@@ -138,6 +138,12 @@ git push -f
 ```shell
 git rebase -i origin/master
 ```
+比如合并三个 commits 成一个
+```
+pick e7ba81d Commit-1
+s 5756e15 Commit-2
+s b1b8189 Commit-3
+```
 rebase 完成后，然后也还可以 --amend，然后，也要 push -f
 
 #### 4.3 合并 PR 到主干
