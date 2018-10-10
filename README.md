@@ -247,6 +247,17 @@ git remote add origin git@github.com:lianpian/ripple.git
 git push -u origin master
 ```
 
+### 7. 其它
+
+#### Undo a commit and redo
+```
+$ git commit -m "Something terribly misguided"             # (1)
+$ git reset HEAD~                                          # (2)
+<< edit files as necessary >>                              # (3)
+$ git add ...                                              # (4)
+$ git commit -c ORIG_HEAD                                  # (5)
+```
+
 ### Reference
 
 https://github.com/akka/akka/blob/master/CONTRIBUTING.md
